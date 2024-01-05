@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: steelblue;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ControllerUser">
+    <children>
+        <Label layoutX="259.0" layoutY="44.0" text="Registar">
+            <font>
+                <Font name="System Bold Italic" size="30.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtfieldUsername" layoutX="93.0" layoutY="113.0" prefHeight="26.0" prefWidth="156.0" promptText="Ex.:Tinoco_Carlos" />
+        <PasswordField fx:id="pwdfieldPassword" layoutX="390.0" layoutY="113.0" promptText="Password" />
+        <Button fx:id="registerButton" layoutX="493.0" layoutY="354.0" mnemonicParsing="false" onAction="#register" text="Registar" />
+        <Button fx:id="backSceneButton" layoutX="8.0" layoutY="354.0" mnemonicParsing="false" onAction="#switchToLogin" text="Voltar " />
+        <TextField fx:id="txtfieldName" layoutX="69.0" layoutY="156.0" prefHeight="26.0" prefWidth="265.0" promptText="Ex.:Tinoco Carlos" />
+        <TextField fx:id="txtfieldNumCC" layoutX="340.0" layoutY="194.0" prefHeight="26.0" prefWidth="202.0" promptText="Ex.:XXXXXXXX" />
+        <TextField fx:id="txtfieldNif" layoutX="55.0" layoutY="195.0" prefHeight="26.0" prefWidth="186.0" promptText="Ex.: xxxxxxxxx" />
+        <TextField fx:id="txtfieldPhone" layoutX="392.0" layoutY="155.0" prefHeight="26.0" prefWidth="150.0" promptText="Ex.: XXXXXXXXX" />
+        <TextField fx:id="txtfieldHouse" layoutX="77.0" layoutY="244.0" prefHeight="26.0" prefWidth="170.0" promptText="Ex.:Rua x, nºy " />
+        <TextField fx:id="txtfieldLocation" layoutX="336.0" layoutY="241.0" prefHeight="26.0" prefWidth="209.0" promptText="Ex.: Viana do Castelo" />
+        <Label layoutX="32.0" layoutY="116.0" prefHeight="19.0" prefWidth="69.0" text="Username:" />
+        <Label layoutX="33.0" layoutY="161.0" text="Nome:" />
+        <Label layoutX="34.0" layoutY="199.0" text="NIF:" />
+        <Label layoutX="33.0" layoutY="249.0" text="Morada:" />
+        <Label layoutX="326.0" layoutY="116.0" text="Password:" />
+        <Label layoutX="259.0" layoutY="199.0" text="Numero do CC:" />
+        <Label layoutX="340.0" layoutY="160.0" text="Telefone:" />
+        <Label layoutX="270.0" layoutY="245.0" text="Localidade:" />
+        <Label layoutX="31.0" layoutY="89.0" text="Dados Login:">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="139.0" text="Dados Utilizador: ">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="dpickerDateBorn" layoutX="44.0" layoutY="310.0" />
+        <Label layoutX="44.0" layoutY="293.0" text="Data Nascimento:" />
+        <ChoiceBox fx:id="choiceBoxTypeUsers" layoutX="270.0" layoutY="310.0" prefWidth="150.0" />
+        <Label layoutX="270.0" layoutY="293.0" text="Tipo de Utilizador" />
+        <Text fx:id="phoneError" fill="RED" layoutX="389.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número Inválido" visible="false" wrappingWidth="104.0" />
+        <Text fx:id="nifError" fill="RED" layoutX="59.0" layoutY="230.0"  strokeType="OUTSIDE" strokeWidth="0.0" text="NIF Inválido" visible="false" />
+        <Text fx:id="ccError" fill="RED" layoutX="341.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número do CC Inválido" visible="false" />
+    </children>
+</AnchorPane>
